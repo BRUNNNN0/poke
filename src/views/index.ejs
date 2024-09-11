@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>PokeDex Unicesumar</h1>
+    <div class="container">
+        <% results.forEach(pokemon => { %>
+        <div class="pokemon-card">
+            Id: <%= pokemon.sprites %>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/<%= pokemon.name %>/<%= pokemon.id %>.png">
+            <p>Nome: <%= pokemon.name %></p>
+            <button>
+                <a href="/pokemon/<%= pokemon.name %>">Clique aqui</a>
+            </button>
+        </div>
+        <% }) %>
+    </div>
+</body>
+</html>
